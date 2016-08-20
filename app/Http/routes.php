@@ -31,6 +31,8 @@ Route::get('/repo_history', 'Repository@repo_history');
 
 Route::get('/post_work', 'PostWork@index');
 
+Route::get('/edit_profile', 'ProfileController@edit');
+
 /*Route::get('/private_repo', function(){
 	return view('/pages/Repository/private_repo');
 });

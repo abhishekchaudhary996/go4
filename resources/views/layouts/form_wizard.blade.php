@@ -1,3 +1,8 @@
+@if (Auth::guest())
+                        <li><a href="{{ url('/login') }}">Login</a></li>
+                        <li><a href="{{ url('/register') }}">Register</a></li>
+@else
+
 <!doctype html>
 <html class="fixed sidebar-left-xs">
     <head>
@@ -251,8 +256,14 @@
                                 <img src="assets/images/!logged-user.jpg" alt="Joseph Doe" class="img-circle" data-lock-picture="assets/images/!logged-user.jpg" />
                             </figure>
                             <div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@okler.com">
-                                <span class="name">John Doe Junior</span>
-                                <span class="role">administrator</span>
+                                <span class="name">
+                                    @if (Auth::guest()) 
+                                        administrator
+                                    @else
+                                    {{ Auth::user()->name }}
+                                    @endif
+
+                                </span>
                             </div>
             
                             <i class="fa custom-caret"></i>
@@ -753,3 +764,5 @@
         <script src="assets/javascripts/forms/examples.wizard.js"></script>
     </body>
 </html>
+
+@endif

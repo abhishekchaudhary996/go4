@@ -1,3 +1,7 @@
+@if (Auth::guest())
+      You are not loged in. Please sign up or login.
+@else
+
 @extends('layouts.form_wizard')
 
 @section('content')
@@ -184,3 +188,5 @@
                         </section>
 
 @endsection
+
+@endif

@@ -1,3 +1,7 @@
+@if (Auth::guest())
+      You are not loged in. Please sign up or login.
+@else
+
 @extends('layouts.app1')
 
 @section('content')
@@ -14,6 +18,8 @@
         </div>
     </header>
     <!-- start: page -->    
-    Welcome to dashboard!!!
+    Welcome to dashboard!!! 
 </section>
 @endsection
+
+@endif

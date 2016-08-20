@@ -1,3 +1,8 @@
+@if (Auth::guest())
+                        <li><a href="{{ url('/login') }}">Login</a></li>
+                        <li><a href="{{ url('/register') }}">Register</a></li>
+@else
+
 <!doctype html>
 <html class="fixed sidebar-left-xs">
     <head>
@@ -239,7 +244,14 @@
                                 <img src="assets/images/!logged-user.jpg" alt="Joseph Doe" class="img-circle" data-lock-picture="assets/images/!logged-user.jpg" />
                             </figure>
                             <div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@okler.com">
-                                <span class="name">{{ Auth::user()->name }}</span>
+                                <span class="name">
+                                    @if (Auth::guest()) 
+                                        administrator
+                                    @else
+                                    {{ Auth::user()->name }}
+                                    @endif
+
+                                </span>
                                 <span class="role">admin</span>
                             </div>
             
@@ -334,8 +346,8 @@
                                         </a>
                                         <ul class="nav nav-children">
                                             <li>
-                                                <a href="pages-signup.html">
-                                                     Sign Up
+                                                <a href="/edit_profile">
+                                                     Edit Profile
                                                 </a>
                                             </li>
                                             <li>
@@ -493,7 +505,7 @@
                                         <ul class="nav nav-children">
                                             <li>
                                                 <a href="extra-changelog.html">
-                                                     Changelog
+                                                    ajax
                                                 </a>
                                             </li>
                                             <li>
@@ -609,7 +621,6 @@
 
 
                 @yield('content')
-
 
                 <aside id="sidebar-right" class="sidebar-right">
                 <div class="nano">
@@ -731,3 +742,4 @@
 
     </body>
 </html>
+@endif
