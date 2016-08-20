@@ -109,11 +109,49 @@
                                                 </div>
                                                 <div id="w4-confirm" class="tab-pane">
                                                     <div class="form-group">
+                                                    <div class="col-sm-3"></div>
+                                                        <div class="col-sm-9">
+                                                            <div class="radio-custom radio-primary">
+                                                                <input type="radio" id="radioExample2" name="radioExample">
+                                                                <label for="radioExample2">Post Publicly(Anybody will ask you for this work</label>
+                                                            </div>
+                        
+                                                            <div class="radio-custom radio-success">
+                                                                <input type="radio" id="radioExample3" name="radioExample">
+                                                                <label for="radioExample3">Our developer will contact you for the work and charge you according </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-sm-11 control-label" for="w4-email">
+                                                        In case if you choose (second option), our developer to do work, then please provide below information.
+                                                    </label>
+                                                    </div>
+                                                    <div class="form-group">
+                                                   <!--  <label class="col-sm-3 control-label" for="w4-email">
+                                                        In case if you choose (second option), our developer to do work, then please provide below information.
+                                                    </label><br> -->
                                                         <label class="col-sm-3 control-label" for="w4-email">Email</label>
                                                         <div class="col-sm-9">
                                                             <input type="text" class="form-control" name="email" id="w4-email" required>
                                                         </div>
                                                     </div>
+
+                                                    <div class="form-group">
+                                                        <div class="form-group">
+                                                    <label class="col-md-3 control-label">Phone</label>
+                                                    <div class="col-md-6 control-label">
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon">
+                                                                <i class="fa fa-phone"></i>
+                                                            </span>
+                                                            <input id="phone" data-plugin-masked-input data-input-mask="(999) 999-9999" placeholder="(123) 123-1234" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                    </div>
+
+
                                                     <div class="form-group">
                                                         <div class="col-sm-3"></div>
                                                         <div class="col-sm-9">
