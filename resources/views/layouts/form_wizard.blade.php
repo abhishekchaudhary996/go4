@@ -296,97 +296,55 @@
                             <nav id="menu" class="nav-main" role="navigation">
                                 <ul class="nav nav-main">
                                     <li>
-                                        <a href="index.html">
+                                        <a href="/dashboard">
                                             <i class="fa fa-home" aria-hidden="true"></i>
                                             <span>Dashboard</span>
                                         </a>
                                     </li>
-                                    <li class="nav-parent">
+                                    <li class="nav-parent nav-expanded nav-active">
                                         <a>
-                                            <i class="fa fa-columns" aria-hidden="true"></i>
-                                            <span>Layouts</span>
+                                            <i class="fa fa-clipboard" aria-hidden="true"></i>
+                                            <span>Repositories</span>
                                         </a>
                                         <ul class="nav nav-children">
                                             <li>
-                                                <a href="layouts-default.html">
-                                                     Default
+                                                <a href="/new_repo">
+                                                
+                                                <i class="fa fa-plus-square" aria-hidden="true"></i>
+                                                    New Repository
                                                 </a>
                                             </li>
                                             <li class="nav-parent">
-                                                <a>
-                                                    Boxed
+                                                <a> 
+                                                <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                                    Repositories
                                                 </a>
                                                 <ul class="nav nav-children">
                                                     <li>
-                                                        <a href="layouts-boxed.html">
-                                                            Static Header
+                                                        <a href="/public_repo"> 
+                                                            - Public
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="layouts-boxed-fixed-header.html">
-                                                            Fixed Header
+                                                        <a href="/private_repo">
+                                                           - Private
                                                         </a>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a href="layouts-dark.html">
-                                                    Dark
+                                                <a href="/repo_history">
+                                                <i class="fa fa-history" aria-hidden="true"></i>
+                                                    History
                                                 </a>
                                             </li>
-                                            <li>
-                                                <a href="layouts-dark-header.html">
-                                                    Dark Header
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="layouts-light-sidebar.html">
-                                                    Light Sidebar
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="layouts-left-sidebar-collapsed.html">
-                                                     Left Sidebar Collapsed
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="layouts-left-sidebar-scroll.html">
-                                                     Left Sidebar Scroll
-                                                </a>
-                                            </li>
-                                            <li class="nav-parent">
-                                                <a>
-                                                    Left Sidebar Sizes
-                                                </a>
-                                                <ul class="nav nav-children">
-                                                    <li>
-                                                        <a href="layouts-sidebar-sizes-xs.html">
-                                                            Left Sidebar XS
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="layouts-sidebar-sizes-sm.html">
-                                                            Left Sidebar SM
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="layouts-sidebar-sizes-md.html">
-                                                            Left Sidebar MD
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="layouts-square-borders.html">
-                                                     Square Borders
-                                                </a>
-                                            </li>
+                                            
                                         </ul>
                                     </li>
                                     <li class="nav-parent">
                                         <a>
-                                            <i class="fa fa-copy" aria-hidden="true"></i>
-                                            <span>Pages</span>
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                            <span>Profile</span>
                                         </a>
                                         <ul class="nav nav-children">
                                             <li>
@@ -468,259 +426,54 @@
                                     </li>
                                     <li class="nav-parent">
                                         <a>
-                                            <i class="fa fa-tasks" aria-hidden="true"></i>
-                                            <span>UI Elements</span>
+                                            <i class="fa fa-text-width" aria-hidden="true"></i>
+                                            <span>Teams</span>
                                         </a>
                                         <ul class="nav nav-children">
                                             <li>
                                                 <a href="ui-elements-typography.html">
-                                                     Typography
+                                                     Overview
                                                 </a>
                                             </li>
                                             <li class="nav-parent">
                                                 <a>
-                                                    Icons
+                                                <i class="fa fa-plus-square" aria-hidden="true"></i>
+                                                    Create
                                                 </a>
                                                 <ul class="nav nav-children">
                                                     <li>
                                                         <a href="ui-elements-icons-elusive.html">
-                                                            Elusive
+                                                            - Single Team
                                                         </a>
                                                     </li>
                                                     <li>
                                                         <a href="ui-elements-icons-font-awesome.html">
-                                                            Font Awesome
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="ui-elements-icons-glyphicons.html">
-                                                            Glyphicons
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="ui-elements-icons-line-icons.html">
-                                                            Line Icons
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="ui-elements-icons-meteocons.html">
-                                                            Meteocons
+                                                           - Multi Team
                                                         </a>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li>
                                                 <a href="ui-elements-tabs.html">
-                                                     Tabs
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-elements-panels.html">
-                                                     Panels
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-elements-widgets.html">
-                                                     Widgets
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-elements-portlets.html">
-                                                     Portlets
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-elements-buttons.html">
-                                                     Buttons
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-elements-alerts.html">
-                                                     Alerts
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-elements-notifications.html">
-                                                     Notifications
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-elements-modals.html">
-                                                     Modals
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-elements-lightbox.html">
-                                                     Lightbox
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-elements-progressbars.html">
-                                                     Progress Bars
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-elements-sliders.html">
-                                                     Sliders
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-elements-carousels.html">
-                                                     Carousels
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-elements-accordions.html">
-                                                     Accordions
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-elements-nestable.html">
-                                                     Nestable
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-elements-tree-view.html">
-                                                     Tree View
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-elements-scrollable.html">
-                                                     Scrollable
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-elements-grid-system.html">
-                                                     Grid System
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-elements-charts.html">
-                                                     Charts
-                                                </a>
-                                            </li>
-                                            <li class="nav-parent">
-                                                <a>
-                                                    Animations
-                                                </a>
-                                                <ul class="nav nav-children">
-                                                    <li>
-                                                        <a href="ui-elements-animations-appear.html">
-                                                            Appear
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="ui-elements-animations-hover.html">
-                                                            Hover
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nav-parent">
-                                                <a>
-                                                    Loading
-                                                </a>
-                                                <ul class="nav nav-children">
-                                                    <li>
-                                                        <a href="ui-elements-loading-overlay.html">
-                                                            Overlay
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="ui-elements-loading-progress.html">
-                                                            Progress
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="ui-elements-extra.html">
-                                                     Extra
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-parent nav-expanded nav-active">
-                                        <a>
-                                            <i class="fa fa-list-alt" aria-hidden="true"></i>
-                                            <span>Forms</span>
-                                        </a>
-                                        <ul class="nav nav-children">
-                                            <li>
-                                                <a href="forms-basic.html">
-                                                     Basic
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="forms-advanced.html">
-                                                     Advanced
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="forms-validation.html">
-                                                     Validation
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="forms-layouts.html">
-                                                     Layouts
-                                                </a>
-                                            </li>
-                                            <li class="nav-active">
-                                                <a href="forms-wizard.html">
-                                                     Wizard
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="forms-code-editor.html">
-                                                     Code Editor
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-parent">
-                                        <a>
-                                            <i class="fa fa-table" aria-hidden="true"></i>
-                                            <span>Tables</span>
-                                        </a>
-                                        <ul class="nav nav-children">
-                                            <li>
-                                                <a href="tables-basic.html">
-                                                     Basic
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="tables-advanced.html">
-                                                     Advanced
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="tables-responsive.html">
-                                                     Responsive
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="tables-editable.html">
-                                                     Editable
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="tables-ajax.html">
-                                                     Ajax
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="tables-pricing.html">
-                                                     Pricing
+                                                <i class="fa fa-asterisk" aria-hidden="true"></i>
+                                                     Settings
                                                 </a>
                                             </li>
                                         </ul>
                                     </li>
                                     <li>
+                                        <a href="/post_work">
+                                            <i class="fa fa-list-alt" aria-hidden="true"></i>
+                                            <span>Post Work</span>
+                                        </a>
+                                    </li>
+
+
+                                    <li>
                                         <a href="mailbox-folder.html">
                                             <span class="pull-right label label-primary">182</span>
                                             <i class="fa fa-envelope" aria-hidden="true"></i>
-                                            <span>Mailbox</span>
+                                            <span>Inbox</span>
                                         </a>
                                     </li>
                                     <li class="nav-parent">
@@ -749,7 +502,7 @@
                                     <li class="nav-parent">
                                         <a>
                                             <i class="fa fa-asterisk" aria-hidden="true"></i>
-                                            <span>Extra</span>
+                                            <span>Settings</span>
                                         </a>
                                         <ul class="nav nav-children">
                                             <li>

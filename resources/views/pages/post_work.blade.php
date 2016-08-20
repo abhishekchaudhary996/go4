@@ -3,7 +3,7 @@
 @section('content')
 <section role="main" class="content-body">
     <header class="page-header">
-        <h2>Dashboard</h2>
+        <h2>Post Work</h2>
         <div class="right-wrapper pull-right">
             <ol class="breadcrumbs">
                 <li> <a href="index.html"> <i class="fa fa-home"></i> </a> </li>
@@ -75,8 +75,8 @@
                                                                                         <div class="panel-body">
                                                                                             <form class="form-horizontal form-bordered">
                                                                                                 <div class="form-group">
-                                                                                                    <label class="col-md-3 control-label">Full Description</label>
-                                                                                                    <div class="col-md-9">
+                                                                                                    
+                                                                                                    <div class="col-md-12">
                                                                                                         <div class="summernote" data-plugin-summernote data-plugin-options='{ "height": 180, "codemirror": { "theme": "ambiance" } }'>Start typing...</div>
                                                                                                     </div>
                                                                                                 </div>
