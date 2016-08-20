@@ -4,7 +4,8 @@
 
         <!-- Basic -->
         <meta charset="UTF-8">
-        <title>go4</title>
+
+        <title>Form Wizard | Porto Admin - Responsive HTML5 Template 1.5.1</title>
         <meta name="keywords" content="HTML5 Admin Template" />
         <meta name="description" content="Porto Admin - Responsive HTML5 Template">
         <meta name="author" content="okler.net">
@@ -23,12 +24,22 @@
         <link rel="stylesheet" href="assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css" />
 
         <!-- Specific Page Vendor CSS -->
+        <link rel="stylesheet" href="assets/vendor/pnotify/pnotify.custom.css" />
         <link rel="stylesheet" href="assets/vendor/jquery-ui/jquery-ui.css" />
         <link rel="stylesheet" href="assets/vendor/jquery-ui/jquery-ui.theme.css" />
+        <link rel="stylesheet" href="assets/vendor/select2/css/select2.css" />
+        <link rel="stylesheet" href="assets/vendor/select2-bootstrap-theme/select2-bootstrap.css" />
         <link rel="stylesheet" href="assets/vendor/bootstrap-multiselect/bootstrap-multiselect.css" />
-        <link rel="stylesheet" href="assets/vendor/morris.js/morris.css" />
-
-        <link rel="stylesheet" href="assets/vendor/pnotify/pnotify.custom.css" />
+        <link rel="stylesheet" href="assets/vendor/bootstrap-tagsinput/bootstrap-tagsinput.css" />
+        <link rel="stylesheet" href="assets/vendor/bootstrap-colorpicker/css/bootstrap-colorpicker.css" />
+        <link rel="stylesheet" href="assets/vendor/bootstrap-timepicker/css/bootstrap-timepicker.css" />
+        <link rel="stylesheet" href="assets/vendor/dropzone/basic.css" />
+        <link rel="stylesheet" href="assets/vendor/dropzone/dropzone.css" />
+        <link rel="stylesheet" href="assets/vendor/bootstrap-markdown/css/bootstrap-markdown.min.css" />
+        <link rel="stylesheet" href="assets/vendor/summernote/summernote.css" />
+        <link rel="stylesheet" href="assets/vendor/summernote/summernote-bs3.css" />
+        <link rel="stylesheet" href="assets/vendor/codemirror/lib/codemirror.css" />
+        <link rel="stylesheet" href="assets/vendor/codemirror/theme/monokai.css" />
 
         <!-- Theme CSS -->
         <link rel="stylesheet" href="assets/stylesheets/theme.css" />
@@ -59,7 +70,8 @@
             
                 <!-- start: search & user box -->
                 <div class="header-right">
-            		<form action="pages-search-results.html" class="search nav-form">
+            
+                    <form action="pages-search-results.html" class="search nav-form">
                         <div class="input-group input-search">
                             <input type="text" class="form-control" name="q" id="q" placeholder="Search...">
                             <span class="input-group-btn">
@@ -67,7 +79,7 @@
                             </span>
                         </div>
                     </form>
-           
+            
                     <span class="separator"></span>
             
                     <ul class="notifications">
@@ -239,8 +251,8 @@
                                 <img src="assets/images/!logged-user.jpg" alt="Joseph Doe" class="img-circle" data-lock-picture="assets/images/!logged-user.jpg" />
                             </figure>
                             <div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@okler.com">
-                                <span class="name">{{ Auth::user()->name }}</span>
-                                <span class="role">admin</span>
+                                <span class="name">John Doe Junior</span>
+                                <span class="role">administrator</span>
                             </div>
             
                             <i class="fa custom-caret"></i>
@@ -255,7 +267,9 @@
                                 <li>
                                     <a role="menuitem" tabindex="-1" href="#" data-lock-screen="true"><i class="fa fa-lock"></i> Lock Screen</a>
                                 </li>
-                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                                <li>
+                                    <a role="menuitem" tabindex="-1" href="pages-signin.html"><i class="fa fa-power-off"></i> Logout</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -282,55 +296,97 @@
                             <nav id="menu" class="nav-main" role="navigation">
                                 <ul class="nav nav-main">
                                     <li>
-                                        <a href="/dashboard">
+                                        <a href="index.html">
                                             <i class="fa fa-home" aria-hidden="true"></i>
                                             <span>Dashboard</span>
                                         </a>
                                     </li>
-                                    <li class="nav-parent nav-expanded nav-active">
+                                    <li class="nav-parent">
                                         <a>
-                                            <i class="fa fa-clipboard" aria-hidden="true"></i>
-                                            <span>Repositories</span>
+                                            <i class="fa fa-columns" aria-hidden="true"></i>
+                                            <span>Layouts</span>
                                         </a>
                                         <ul class="nav nav-children">
                                             <li>
-                                                <a href="/new_repo">
-                                                
-                                                <i class="fa fa-plus-square" aria-hidden="true"></i>
-                                                    New Repository
+                                                <a href="layouts-default.html">
+                                                     Default
                                                 </a>
                                             </li>
                                             <li class="nav-parent">
-                                                <a> 
-                                                <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                                                    Repositories
+                                                <a>
+                                                    Boxed
                                                 </a>
                                                 <ul class="nav nav-children">
                                                     <li>
-                                                        <a href="/public_repo"> 
-                                                            - Public
+                                                        <a href="layouts-boxed.html">
+                                                            Static Header
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="/private_repo">
-                                                           - Private
+                                                        <a href="layouts-boxed-fixed-header.html">
+                                                            Fixed Header
                                                         </a>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a href="/repo_history">
-                                                <i class="fa fa-history" aria-hidden="true"></i>
-                                                    History
+                                                <a href="layouts-dark.html">
+                                                    Dark
                                                 </a>
                                             </li>
-                                            
+                                            <li>
+                                                <a href="layouts-dark-header.html">
+                                                    Dark Header
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="layouts-light-sidebar.html">
+                                                    Light Sidebar
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="layouts-left-sidebar-collapsed.html">
+                                                     Left Sidebar Collapsed
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="layouts-left-sidebar-scroll.html">
+                                                     Left Sidebar Scroll
+                                                </a>
+                                            </li>
+                                            <li class="nav-parent">
+                                                <a>
+                                                    Left Sidebar Sizes
+                                                </a>
+                                                <ul class="nav nav-children">
+                                                    <li>
+                                                        <a href="layouts-sidebar-sizes-xs.html">
+                                                            Left Sidebar XS
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="layouts-sidebar-sizes-sm.html">
+                                                            Left Sidebar SM
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="layouts-sidebar-sizes-md.html">
+                                                            Left Sidebar MD
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="layouts-square-borders.html">
+                                                     Square Borders
+                                                </a>
+                                            </li>
                                         </ul>
                                     </li>
                                     <li class="nav-parent">
                                         <a>
-                                            <i class="fa fa-user" aria-hidden="true"></i>
-                                            <span>Profile</span>
+                                            <i class="fa fa-copy" aria-hidden="true"></i>
+                                            <span>Pages</span>
                                         </a>
                                         <ul class="nav nav-children">
                                             <li>
@@ -412,54 +468,259 @@
                                     </li>
                                     <li class="nav-parent">
                                         <a>
-                                            <i class="fa fa-text-width" aria-hidden="true"></i>
-                                            <span>Teams</span>
+                                            <i class="fa fa-tasks" aria-hidden="true"></i>
+                                            <span>UI Elements</span>
                                         </a>
                                         <ul class="nav nav-children">
                                             <li>
                                                 <a href="ui-elements-typography.html">
-                                                     Overview
+                                                     Typography
                                                 </a>
                                             </li>
                                             <li class="nav-parent">
                                                 <a>
-                                                <i class="fa fa-plus-square" aria-hidden="true"></i>
-                                                    Create
+                                                    Icons
                                                 </a>
                                                 <ul class="nav nav-children">
                                                     <li>
                                                         <a href="ui-elements-icons-elusive.html">
-                                                            - Single Team
+                                                            Elusive
                                                         </a>
                                                     </li>
                                                     <li>
                                                         <a href="ui-elements-icons-font-awesome.html">
-                                                           - Multi Team
+                                                            Font Awesome
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="ui-elements-icons-glyphicons.html">
+                                                            Glyphicons
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="ui-elements-icons-line-icons.html">
+                                                            Line Icons
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="ui-elements-icons-meteocons.html">
+                                                            Meteocons
                                                         </a>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li>
                                                 <a href="ui-elements-tabs.html">
-                                                <i class="fa fa-asterisk" aria-hidden="true"></i>
-                                                     Settings
+                                                     Tabs
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="ui-elements-panels.html">
+                                                     Panels
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="ui-elements-widgets.html">
+                                                     Widgets
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="ui-elements-portlets.html">
+                                                     Portlets
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="ui-elements-buttons.html">
+                                                     Buttons
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="ui-elements-alerts.html">
+                                                     Alerts
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="ui-elements-notifications.html">
+                                                     Notifications
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="ui-elements-modals.html">
+                                                     Modals
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="ui-elements-lightbox.html">
+                                                     Lightbox
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="ui-elements-progressbars.html">
+                                                     Progress Bars
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="ui-elements-sliders.html">
+                                                     Sliders
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="ui-elements-carousels.html">
+                                                     Carousels
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="ui-elements-accordions.html">
+                                                     Accordions
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="ui-elements-nestable.html">
+                                                     Nestable
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="ui-elements-tree-view.html">
+                                                     Tree View
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="ui-elements-scrollable.html">
+                                                     Scrollable
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="ui-elements-grid-system.html">
+                                                     Grid System
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="ui-elements-charts.html">
+                                                     Charts
+                                                </a>
+                                            </li>
+                                            <li class="nav-parent">
+                                                <a>
+                                                    Animations
+                                                </a>
+                                                <ul class="nav nav-children">
+                                                    <li>
+                                                        <a href="ui-elements-animations-appear.html">
+                                                            Appear
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="ui-elements-animations-hover.html">
+                                                            Hover
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav-parent">
+                                                <a>
+                                                    Loading
+                                                </a>
+                                                <ul class="nav nav-children">
+                                                    <li>
+                                                        <a href="ui-elements-loading-overlay.html">
+                                                            Overlay
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="ui-elements-loading-progress.html">
+                                                            Progress
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="ui-elements-extra.html">
+                                                     Extra
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-parent nav-expanded nav-active">
+                                        <a>
+                                            <i class="fa fa-list-alt" aria-hidden="true"></i>
+                                            <span>Forms</span>
+                                        </a>
+                                        <ul class="nav nav-children">
+                                            <li>
+                                                <a href="forms-basic.html">
+                                                     Basic
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="forms-advanced.html">
+                                                     Advanced
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="forms-validation.html">
+                                                     Validation
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="forms-layouts.html">
+                                                     Layouts
+                                                </a>
+                                            </li>
+                                            <li class="nav-active">
+                                                <a href="forms-wizard.html">
+                                                     Wizard
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="forms-code-editor.html">
+                                                     Code Editor
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-parent">
+                                        <a>
+                                            <i class="fa fa-table" aria-hidden="true"></i>
+                                            <span>Tables</span>
+                                        </a>
+                                        <ul class="nav nav-children">
+                                            <li>
+                                                <a href="tables-basic.html">
+                                                     Basic
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="tables-advanced.html">
+                                                     Advanced
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="tables-responsive.html">
+                                                     Responsive
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="tables-editable.html">
+                                                     Editable
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="tables-ajax.html">
+                                                     Ajax
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="tables-pricing.html">
+                                                     Pricing
                                                 </a>
                                             </li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="/post_work">
-                                            <i class="fa fa-list-alt" aria-hidden="true"></i>
-                                            <span>Post Work</span>
-                                        </a>
-                                    </li>
-
-
-                                    <li>
                                         <a href="mailbox-folder.html">
                                             <span class="pull-right label label-primary">182</span>
                                             <i class="fa fa-envelope" aria-hidden="true"></i>
-                                            <span>Inbox</span>
+                                            <span>Mailbox</span>
                                         </a>
                                     </li>
                                     <li class="nav-parent">
@@ -488,7 +749,7 @@
                                     <li class="nav-parent">
                                         <a>
                                             <i class="fa fa-asterisk" aria-hidden="true"></i>
-                                            <span>Settings</span>
+                                            <span>Extra</span>
                                         </a>
                                         <ul class="nav nav-children">
                                             <li>
@@ -607,11 +868,19 @@
                 </aside>
                 <!-- end: sidebar -->
 
+               <!--  <section role="main" class="content-body"> -->
 
-                @yield('content')
+
+                    <!-- start: page -->
+                        @yield('content')
 
 
-                <aside id="sidebar-right" class="sidebar-right">
+                        
+                    <!-- end: page -->
+               <!--  </section> -->
+            </div>
+
+            <aside id="sidebar-right" class="sidebar-right">
                 <div class="nano">
                     <div class="nano-content">
                         <a href="#" class="mobile-close visible-xs">
@@ -678,8 +947,7 @@
                     </div>
                 </div>
             </aside>
-
-                
+        </section>
 
         <!-- Vendor -->
         <script src="assets/vendor/jquery/jquery.js"></script>
@@ -691,31 +959,33 @@
         <script src="assets/vendor/jquery-placeholder/jquery-placeholder.js"></script>
         
         <!-- Specific Page Vendor -->
+        <script src="assets/vendor/jquery-validation/jquery.validate.js"></script>
+        <script src="assets/vendor/bootstrap-wizard/jquery.bootstrap.wizard.js"></script>
+        <script src="assets/vendor/pnotify/pnotify.custom.js"></script>
         <script src="assets/vendor/jquery-ui/jquery-ui.js"></script>
         <script src="assets/vendor/jqueryui-touch-punch/jqueryui-touch-punch.js"></script>
-        <script src="assets/vendor/jquery-appear/jquery-appear.js"></script>
+        <script src="assets/vendor/select2/js/select2.js"></script>
         <script src="assets/vendor/bootstrap-multiselect/bootstrap-multiselect.js"></script>
-        <script src="assets/vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.js"></script>
-        <script src="assets/vendor/flot/jquery.flot.js"></script>
-        <script src="assets/vendor/flot.tooltip/flot.tooltip.js"></script>
-        <script src="assets/vendor/flot/jquery.flot.pie.js"></script>
-        <script src="assets/vendor/flot/jquery.flot.categories.js"></script>
-        <script src="assets/vendor/flot/jquery.flot.resize.js"></script>
-        <script src="assets/vendor/jquery-sparkline/jquery-sparkline.js"></script>
-        <script src="assets/vendor/raphael/raphael.js"></script>
-        <script src="assets/vendor/morris.js/morris.js"></script>
-        <script src="assets/vendor/gauge/gauge.js"></script>
-        <script src="assets/vendor/snap.svg/snap.svg.js"></script>
-        <script src="assets/vendor/liquid-meter/liquid.meter.js"></script>
-        <script src="assets/vendor/jqvmap/jquery.vmap.js"></script>
-        <script src="assets/vendor/jqvmap/data/jquery.vmap.sampledata.js"></script>
-        <script src="assets/vendor/jqvmap/maps/jquery.vmap.world.js"></script>
-        <script src="assets/vendor/jqvmap/maps/continents/jquery.vmap.africa.js"></script>
-        <script src="assets/vendor/jqvmap/maps/continents/jquery.vmap.asia.js"></script>
-        <script src="assets/vendor/jqvmap/maps/continents/jquery.vmap.australia.js"></script>
-        <script src="assets/vendor/jqvmap/maps/continents/jquery.vmap.europe.js"></script>
-        <script src="assets/vendor/jqvmap/maps/continents/jquery.vmap.north-america.js"></script>
-        <script src="assets/vendor/jqvmap/maps/continents/jquery.vmap.south-america.js"></script>
+        <script src="assets/vendor/jquery-maskedinput/jquery.maskedinput.js"></script>
+        <script src="assets/vendor/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+        <script src="assets/vendor/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+        <script src="assets/vendor/bootstrap-timepicker/bootstrap-timepicker.js"></script>
+        <script src="assets/vendor/fuelux/js/spinner.js"></script>
+        <script src="assets/vendor/dropzone/dropzone.js"></script>
+        <script src="assets/vendor/bootstrap-markdown/js/markdown.js"></script>
+        <script src="assets/vendor/bootstrap-markdown/js/to-markdown.js"></script>
+        <script src="assets/vendor/bootstrap-markdown/js/bootstrap-markdown.js"></script>
+        <script src="assets/vendor/codemirror/lib/codemirror.js"></script>
+        <script src="assets/vendor/codemirror/addon/selection/active-line.js"></script>
+        <script src="assets/vendor/codemirror/addon/edit/matchbrackets.js"></script>
+        <script src="assets/vendor/codemirror/mode/javascript/javascript.js"></script>
+        <script src="assets/vendor/codemirror/mode/xml/xml.js"></script>
+        <script src="assets/vendor/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+        <script src="assets/vendor/codemirror/mode/css/css.js"></script>
+        <script src="assets/vendor/summernote/summernote.js"></script>
+        <script src="assets/vendor/bootstrap-maxlength/bootstrap-maxlength.js"></script>
+        <script src="assets/vendor/ios7-switch/ios7-switch.js"></script>
+        <script src="assets/vendor/bootstrap-confirmation/bootstrap-confirmation.js"></script>
         
         <!-- Theme Base, Components and Settings -->
         <script src="assets/javascripts/theme.js"></script>
@@ -727,7 +997,6 @@
         <script src="assets/javascripts/theme.init.js"></script>
 
         <!-- Examples -->
-        <script src="assets/javascripts/dashboard/examples.dashboard.js"></script>
-
+        <script src="assets/javascripts/forms/examples.wizard.js"></script>
     </body>
 </html>
